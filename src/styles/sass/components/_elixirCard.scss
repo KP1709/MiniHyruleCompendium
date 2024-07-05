@@ -1,13 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-#grid__items {
-    grid-template-columns: repeat(auto-fit, minmax(11.75em, 1fr));
-    column-gap: 3em;
-    row-gap: 1em;
-    justify-items: center;
-}
-
 .elixir__card {
     position: relative;
     width: 85vw;
