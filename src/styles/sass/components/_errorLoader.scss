@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+#error__card{
+    width: fit-content;
+    height: fit-content;
+}

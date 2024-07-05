@@ -1,0 +1,81 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+#elixir__card-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 10px;
+
+    @include medium-tablet {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, auto);
+        row-gap: 20px;
+        column-gap: 25px;
+    }
+
+    @include small-laptop {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, auto);
+        row-gap: 0;
+        column-gap: 0;
+    }
+}
+
+#elixir__card-img {
+    grid-row: 1;
+    justify-self: center;
+
+    @include medium-tablet {
+        grid-column: 1/-1;
+    }
+
+    @include small-laptop {
+        grid-column: 1;
+        grid-row: 1/-1;
+        align-self: center;
+    }
+}
+
+#elixir__card-head {
+    grid-row: 2;
+
+    @include medium-tablet {
+        grid-column: 1/3;
+        justify-self: center;
+        text-align: center;
+    }
+
+    @include small-laptop {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        text-align: start;
+    }
+}
+
+#elixir__card-description {
+    grid-row: 3;
+
+    @include medium-tablet {
+        grid-column: 1;
+    }
+
+    @include small-laptop {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+#elixir__card-ingredients {
+    grid-row: 4;
+
+    @include medium-tablet {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    @include small-laptop {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}

@@ -1,0 +1,84 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+#grid__items {
+    grid-template-columns: repeat(auto-fit, minmax(11.75em, 1fr));
+    column-gap: 3em;
+    row-gap: 1em;
+    justify-items: center;
+}
+
+.elixir__card {
+    position: relative;
+    width: 85vw;
+    height: 200px;
+
+    &:hover {
+        background-color: hsl(0, 0%, 85%);
+        background-blend-mode: multiply;
+
+    }
+
+    @include large-phone {
+        min-width: 190px;
+        max-width: 200px;
+        height: 270px;
+    }
+
+    &.row {
+        justify-content: space-around;
+
+        @include large-phone {
+            flex-direction: column;
+        }
+    }
+
+    & h2,
+    & p,
+    & img {
+        align-self: center
+    }
+
+    & h2 {
+        margin-top: 1px;
+        font-size: 6vw;
+        text-align: center;
+
+        @include large-phone {
+            font-size: clamp(1rem, 1vw, 1.1rem);
+            align-self: center;
+        }
+    }
+
+    & p {
+        margin-top: 3px;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+        text-align: center;
+
+        @include large-phone {
+            align-self: center;
+        }
+    }
+
+    & img {
+        width: 6em;
+        padding: 5px;
+
+        @include large-phone {
+            align-self: center;
+        }
+    }
+
+    &-link {
+        text-decoration: none;
+        color: hsl(0, 0%, 0%);
+    }
+
+    &-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+
+// Breakpoints
+@mixin large-phone {
+    @media (min-width: #{$large-phone}) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+    @media (min-width: #{$small-tablet}) {
+    @content;
+  }
+}
+
+@mixin medium-tablet {
+  @media (min-width: #{$medium-tablet}) {
+  @content;
+}
+}
+
+@mixin small-laptop {
+  @media (min-width: #{$small-laptop}) {
+  @content;
+}
+}

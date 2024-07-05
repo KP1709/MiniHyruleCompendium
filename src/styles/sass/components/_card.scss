@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.card{
+    align-items: center;
+    background-image: $hyrule-white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid hsl(0, 0%, 0%);
+    border-style: ridge;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}

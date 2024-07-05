@@ -1,0 +1,28 @@
+// Move to different file
+#loading__page {
+    align-items: center;
+    color: white;
+}
+
+.loadingLogo {
+    margin-top: 20vh;
+    width: 20em;
+
+    animation: 2s infinite alternate slowPulse;
+
+}
+
+@keyframes slowPulse {
+    from {
+        transform: scale(0.8);
+        opacity: 0.5
+    }
+  
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+
+

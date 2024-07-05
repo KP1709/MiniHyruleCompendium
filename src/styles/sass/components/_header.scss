@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+header {
+    background-image: url('/src/assets/BOTWpatterns.jpg');
+    background-repeat: no-repeat;
+    color: #5390d9;
+    padding: 10px;
+    text-align: center;
+
+    h2 {
+        text-shadow: 1px 1px 20px #023e8a;
+    }
+
+    h2::before, h2::after{
+        content: "\2658";
+        padding: 0 10px;
+    }
+}

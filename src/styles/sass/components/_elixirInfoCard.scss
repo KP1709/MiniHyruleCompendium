@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.elixir__backlink {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.elixir__card-info {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+
+    @include small-laptop{
+        padding: 40px 20px;
+    }
+}
+
+.elixir__info-subhead {
+    text-decoration: underline;
+}
+
+#elixir__card {
+    &-img {
+        @include small-laptop {
+            width: 13em;
+        }
+    }
+
+    &-name {
+        font-size: 2rem;
+    }
+
+    &-list {
+        list-style: disc;
+        list-style-position: inside;
+    }
+}
