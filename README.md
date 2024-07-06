@@ -24,7 +24,7 @@ This project is a mini Hyrule Compendium where the user can view information abo
 All images used belong to Nintendo with intention to highlight the game and practice front-end skills.  
 The images are from the Zelda Dungeon Wiki - https://www.zeldadungeon.net/wiki/Gallery:Tears_of_the_Kingdom_Elixirs.
 
-
+## 📱 Display
 Desktop Display|
 | :--- |
 ![Homepage - desktop view](readme/homepage.png)
