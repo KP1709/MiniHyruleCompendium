@@ -1,21 +1,5 @@
 # Mini Hyrule Compendium - Elixirs
 
-Desktop Display|
-| :--- |
-![Homepage - desktop view](readme/homepage.png)
-![Potion's information page - desktop view](readme/elixirPage.png)
-
- Tablet Display| |
-| :--- | :--- |
-![Homepage - tablet view](readme/homepageTablet.png) | ![Potion's information page - tablet view](readme/elixirPageTablet.png)
-
- Phone Display| |
-| :--- | :--- |
-![Homepage - tablet view](readme/homepageSmall.png) | ![Potion's information page - tablet view](readme/elixirPageSmall.png)
-
-
-
-
 ## ⌨️ Tech Stack
 React / React Router / CSS / SASS / MirageJS / Node / npm / Vite 
 
@@ -39,3 +23,21 @@ This project is a mini Hyrule Compendium where the user can view information abo
 ## 📝 Notes
 All images used belong to Nintendo with intention to highlight the game and practice front-end skills.  
 The images are from the Zelda Dungeon Wiki - https://www.zeldadungeon.net/wiki/Gallery:Tears_of_the_Kingdom_Elixirs.
+
+
+Desktop Display|
+| :--- |
+![Homepage - desktop view](readme/homepage.png)
+![Potion's information page - desktop view](readme/elixirPage.png)
+
+ Tablet Display| |
+| :--- | :--- |
+![Homepage - tablet view](readme/homepageTablet.png) | ![Potion's information page - tablet view](readme/elixirPageTablet.png)
+
+ Phone Display| |
+| :--- | :--- |
+![Homepage - tablet view](readme/homepageSmall.png) | ![Potion's information page - tablet view](readme/elixirPageSmall.png)
+
+
+
+
