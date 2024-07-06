@@ -4,7 +4,7 @@
 React / React Router / CSS / SASS / MirageJS / Node / npm / Vite 
 
 ## 🍼 Introduction
-This project is a mini Hyrule Compendium where the user can view information about each potion. After reaching halfway through Bob Ziroll's Learn React Router course on Scrimba, I wanted to practice what I learnt so far. This includes implementing a template page to display the potion's information and experimenting with loaders. 
+This project is a mini Hyrule Compendium where the user can view information about each potion. After reaching halfway through Bob Ziroll's Learn React Router course on Scrimba, I wanted to practice what I learnt so far. This includes implementing a template page to display the potion's information and experimenting with loaders. The potion's information is stored using MirageJS.
  
 ## 🛠️ Features
 - Responsive design - Viewable on mobile, tablet and desktop
