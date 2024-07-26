@@ -5,7 +5,7 @@ import "/server"
 import Layout from "./component/layout"
 import Home, {loader as HomeLoader} from "./pages/home"
 import ErrorPage from "./pages/error"
-import ElixirPage from "./pages/elixirInfo"
+import ElixirPage, {loader as ElixirLoader} from "./pages/elixirInfo"
 import ErrorLoaderPage from "./pages/errorLoader"
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
         <Route element={<Layout />}>
             <Route path="*" element={<ErrorPage />} />
             <Route path="/" element={<Home />} loader={HomeLoader} errorElement={<ErrorLoaderPage/>}/>
-            <Route path="/:elixirName" element={<ElixirPage />} />
+            <Route path="/:elixirName" element={<ElixirPage />} loader={ElixirLoader} errorElement={<ErrorLoaderPage/>}/>
         </Route>
     ))
 
