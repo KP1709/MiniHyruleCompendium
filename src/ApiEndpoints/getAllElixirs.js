@@ -1,5 +1,6 @@
-export async function getAllElixirs() {
-    const res = await fetch("/api/")
+export async function getAllElixirs(name) {
+    const url = name ? `/api/${name}` : "/api/"
+    const res = await fetch(url)
     if (!res.ok){
         throw {
             message: "Failed to get elixirs and tonics", 
