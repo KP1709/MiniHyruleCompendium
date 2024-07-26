@@ -4,6 +4,7 @@ import { useLoaderData, useSearchParams, defer, Await } from "react-router-dom";
 
 import { getAllElixirs } from "../ApiEndpoints/getAllElixirs"
 
+import hylianLogo from "../assets/Hylian_Symbol.png"
 
 // Using API data loader <- added into React Router
 export function loader() {
@@ -50,6 +51,15 @@ export default function Home() {
         })
     }
 
+    function Loading(){
+        return (
+                    <main id="loading__page" className="container col">
+                        <img className="loadingLogo" src={hylianLogo} alt="" />
+                        <h2>Loading...</h2>
+                    </main>
+                )
+    }
+
     return (
         <main className="container">
             {/* <div className="row">
@@ -62,7 +72,7 @@ export default function Home() {
                 </ul>
             </div> */}
             <ul id="grid__items" className="grid">
-                <Suspense fallback={<h2>Loading...</h2>}>
+                <Suspense fallback={<Loading/>}>
                     <Await resolve={dataPromise.allMaterials}>
                         {renderElement}
                     </Await>
