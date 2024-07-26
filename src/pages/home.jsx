@@ -1,34 +1,43 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Card from "../component/card"
-import { useLoaderData, useSearchParams } from "react-router-dom";
+import { useLoaderData, useSearchParams, defer, Await } from "react-router-dom";
 
 import { getAllElixirs } from "../ApiEndpoints/getAllElixirs"
 
 
 // Using API data loader <- added into React Router
 export function loader() {
-    return getAllElixirs()
+    return defer({ allMaterials: getAllElixirs() })
 }
 
 export default function Home() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const allMaterials = useLoaderData()
+    const dataPromise = useLoaderData()
 
-    const typeFilter = searchParams.get("ingredientsNo")
-    // console.log(typeFilter)
+    function renderElement(allMaterials) {
+        const typeFilter = searchParams.get("ingredientsNo")
+        // console.log(typeFilter)
 
-    const displayElixirs = typeFilter
-        ? allMaterials.filter(elixir => elixir.ingredientsNo === typeFilter)
-        : allMaterials
+        const displayElixirs = typeFilter
+            ? allMaterials.filter(elixir => elixir.ingredientsNo === typeFilter)
+            : allMaterials
 
-    const cardElement = displayElixirs.map((item) => {
+        const cardElement = displayElixirs.map((item) => {
+            return (
+                <Card
+                    key={item.id}
+                    item={item}
+                />
+            )
+        })
+
         return (
-            <Card
-                key={item.id}
-                item={item}
-            />
+            <>
+                {cardElement}
+            </>
         )
-    })
+
+    }
 
     function handleFilterChange(key, value) {
         setSearchParams(prevParams => {
@@ -53,7 +62,11 @@ export default function Home() {
                 </ul>
             </div> */}
             <ul id="grid__items" className="grid">
-                {cardElement}
+                <Suspense fallback={<h2>Loading...</h2>}>
+                    <Await resolve={dataPromise.allMaterials}>
+                        {renderElement}
+                    </Await>
+                </Suspense>
             </ul>
         </main>
     )
