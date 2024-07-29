@@ -1,5 +1,5 @@
-export async function getAllElixirs(name) {
-    const url = name ? `/api/${name}` : "/api/"
+export async function getAllElixirs(elixirName) {
+    const url = elixirName ? `/api/${elixirName}` : "/api/"
     const res = await fetch(url)
     if (!res.ok){
         throw {
