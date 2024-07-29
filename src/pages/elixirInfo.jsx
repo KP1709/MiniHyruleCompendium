@@ -8,8 +8,6 @@ import { getAllElixirs } from "../ApiEndpoints/getAllElixirs";
 import isTonicOrElixir from "../reusableFunctions/isTonicOrElixir"
 
 export function loader({ params }) {
-    // Problem is that elixirDetail gets all elixirs than the one selected
-    console.log(params.elixirName)
     return defer({ elixirDetail: getAllElixirs(params.elixirName) })
 }
 
