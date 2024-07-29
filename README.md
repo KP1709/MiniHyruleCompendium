@@ -11,7 +11,8 @@ This project is a mini Hyrule Compendium where the user can view information abo
 - Error path implemented if the information can't load and if users goes to a non-existing page
     - User is offered to go back to the homepage on a non-existing page
 - Homepage uses loader to load all potion data
-- Potion's information page uses useEffect hook with a loading state implemented to show data is being collected then displayed
+- Potion's information page uses loader to load data about the specific potion
+- Await, defer and Suspense are used to display a loading screen if the data is being obtained at the time.
 - Accessibility - Implemented aria-labels where needed + used semantic HTML
 - Back button on potion's information page to go back to homepage.
  
