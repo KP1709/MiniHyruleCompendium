@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import Card from "../component/card"
+import Loading from "../component/loading"
 import { useLoaderData, useSearchParams, defer, Await } from "react-router-dom";
 
 import { getAllElixirs } from "../ApiEndpoints/getAllElixirs"
 
-import hylianLogo from "../assets/Hylian_Symbol.png"
 
 // Using API data loader <- added into React Router
 export function loader() {
@@ -37,7 +37,6 @@ export default function Home() {
                 {cardElement}
             </>
         )
-
     }
 
     function handleFilterChange(key, value) {
@@ -49,15 +48,6 @@ export default function Home() {
             }
             return prevParams
         })
-    }
-
-    function Loading(){
-        return (
-                    <main id="loading__page" className="container col">
-                        <img className="loadingLogo" src={hylianLogo} alt="" />
-                        <h2>Loading...</h2>
-                    </main>
-                )
     }
 
     return (

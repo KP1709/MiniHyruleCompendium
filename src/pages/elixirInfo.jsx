@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
+import Loading from "../component/loading"
 import {Link, useLocation, defer, Await, useLoaderData } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid'; /* Generating unique id*/
 
 import { getAllElixirs } from "../ApiEndpoints/getAllElixirs";
 
 import isTonicOrElixir from "../reusableFunctions/isTonicOrElixir"
-import hylianLogo from "../assets/Hylian_Symbol.png"
 
 export function loader({ params }) {
     // Problem is that elixirDetail gets all elixirs than the one selected
@@ -47,15 +47,6 @@ export default function ElixirInfo() {
 
                 </div>
             </div>
-        )
-    }
-
-    function Loading() {
-        return (
-            <main id="loading__page" className="container col">
-                <img className="loadingLogo" src={hylianLogo} alt="" />
-                <h2>Loading...</h2>
-            </main>
         )
     }
 
