@@ -141,11 +141,11 @@ createServer({
         server.create("item",{
             id: 13, 
             name:"Tough",
-            description:"The Tough effect grants Defense Up, reducing the damage Link takes from enemies for the duration.",
+            description:"The Tough effect grants Defence Up, reducing the damage Link takes from enemies for the duration.",
             ingredients: ['Rugged Rhino Beetle', 'Monster Parts'],
             imageURL: "Tough.png",
-            effect: "Defense up",
-            tag: "Defense",
+            effect: "Defence up",
+            tag: "Defence",
             ingredientsNo: '2'
         })
 
