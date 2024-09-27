@@ -23,47 +23,21 @@ import { Link } from "react-router-dom";
 
 export default function Card(props) {
     function CardPowerIcon() {
-        let icon;
-        if (output.tag === 'Speed') {
-            icon = <FontAwesomeIcon icon={faPersonRunning} className="elixir__card-icon" />
+        switch (output.tag){
+            case('Speed') : return <FontAwesomeIcon icon={faPersonRunning} className="elixir__card-icon" />
+            case('Cold') : return <FontAwesomeIcon icon={faSnowflake} className="elixir__card-icon" color="#489fb5" />
+            case ('Hearts') : return <FontAwesomeIcon icon={faHeartCirclePlus} className="elixir__card-icon" color="#e56b6f" />
+            case ('Shock') : return <FontAwesomeIcon icon={faBolt} className="elixir__card-icon" color="#ffd166" />
+            case ('Sneaky') : return <FontAwesomeIcon icon={faUserNinja} className="elixir__card-icon" color="#6d597a" />
+            case ('Glow') : return <FontAwesomeIcon icon={faLightbulb} className="elixir__card-icon" color="#fcca46" />
+            case ('Slip') : return <FontAwesomeIcon icon={faWater} className="elixir__card-icon" color="#6096ba" />
+            case ('Defence') : return <FontAwesomeIcon icon={faShield} className="elixir__card-icon" color="#70798c" />
+            case ('Stamina') : return <FontAwesomeIcon icon={faCircleNotch} className="elixir__card-icon" color="#8cb369" />
+            case ('Flame') : return <FontAwesomeIcon icon={faFireFlameCurved} className="elixir__card-icon" color="#f9844a" />
+            case ('Attack') : return <FontAwesomeIcon icon={faWandSparkles} className="elixir__card-icon" color="#5e548e" />
+            case ('Heat') : return <FontAwesomeIcon icon={faSun} className="elixir__card-icon" color="#fec89a" />
+            case ('Sticky') : return <FontAwesomeIcon icon={faSpider} className="elixir__card-icon" color="#000000" />    
         }
-        else if (output.tag === 'Cold') {
-            icon = <FontAwesomeIcon icon={faSnowflake} className="elixir__card-icon" color="#489fb5" />
-        }
-        else if (output.tag === 'Hearts') {
-            icon = <FontAwesomeIcon icon={faHeartCirclePlus} className="elixir__card-icon" color="#e56b6f" />
-        }
-        else if (output.tag === 'Shock') {
-            icon = <FontAwesomeIcon icon={faBolt} className="elixir__card-icon" color="#ffd166" />
-        }
-        else if (output.tag === 'Sneaky') {
-            icon = <FontAwesomeIcon icon={faUserNinja} className="elixir__card-icon" color="#6d597a" />
-        }
-        else if (output.tag === 'Glow') {
-            icon = <FontAwesomeIcon icon={faLightbulb} className="elixir__card-icon" color="#fcca46" />
-        }
-        else if (output.tag === 'Slip') {
-            icon = <FontAwesomeIcon icon={faWater} className="elixir__card-icon" color="#6096ba" />
-        }
-        else if (output.tag === 'Defense') {
-            icon = <FontAwesomeIcon icon={faShield} className="elixir__card-icon" color="#70798c" />
-        }
-        else if (output.tag === 'Stamina') {
-            icon = <FontAwesomeIcon icon={faCircleNotch} className="elixir__card-icon" color="#8cb369" />
-        }
-        else if (output.tag === 'Flame') {
-            icon = <FontAwesomeIcon icon={faFireFlameCurved} className="elixir__card-icon" color="#f9844a" />
-        }
-        else if (output.tag === 'Attack') {
-            icon = <FontAwesomeIcon icon={faWandSparkles} className="elixir__card-icon" color="#5e548e" />
-        }
-        else if (output.tag === 'Heat') {
-            icon = <FontAwesomeIcon icon={faSun} className="elixir__card-icon" color="#fec89a" />
-        }
-        else if (output.tag === 'Sticky') {
-            icon = <FontAwesomeIcon icon={faSpider} className="elixir__card-icon" color="#000000" />
-        }
-        return icon;
     }
 
     const output = props.item
